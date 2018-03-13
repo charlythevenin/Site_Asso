@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mar 13 Mars 2018 à 14:55
+-- Généré le :  Mar 13 Mars 2018 à 15:05
 -- Version du serveur :  5.7.21-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.25-0ubuntu0.16.04.1
 
@@ -112,6 +112,12 @@ ALTER TABLE `users`
 --
 -- Contraintes pour les tables exportées
 --
+
+--
+-- Contraintes pour la table `eventsContents`
+--
+ALTER TABLE `eventsContents`
+  ADD CONSTRAINT `eventsContents_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`id`);
 
 --
 -- Contraintes pour la table `newsContents`
